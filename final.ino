@@ -109,16 +109,7 @@ void loop() {
         start = 1;
         Serial.println("Saw CANBUS activity, starting message send");
     }
-      //   start = 1;
-      // if (fromPump.can_id == 0x1B200002) {
-      //   if ((rxId & 0x80000000) == 0x80000000)
-      //     sprintf(msgString, "%.8lX", (rxId & 0x1FFFFFFF));
-      // }
 
-      // if (!strcmp(msgString, "1B200002")){//This is a workaround since extID is 29 bit and arduino is 8 bit.
-      //   Serial.println("Saw CANBUS activity, starting message send");
-      //   start = 1;
-      // }
   } 
 
   // Check every once in a while that the pump is still on
