@@ -1,3 +1,8 @@
+### Sources for writing this script
+### https://github.com/NMSTEC/Volvo_EPS_FREE/blob/main/src/main.cpp
+### https://gist.github.com/mck1117/626174d991183cc72802074f954db97b/
+### https://github.com/rusefi/rusefi/blob/master/firmware/controllers/lua/examples/Volvo-electric-power-steering-pump.txt
+
 #include <SPI.h>
 #include <mcp2515.h>
 
