@@ -1,3 +1,6 @@
+You will need to install the arduino-mcp2515 library to compile this code
+Follow the Software install instructions here https://github.com/autowp/arduino-mcp2515 to download
+
 Repositories used as sources to create this:
 
 https://github.com/NMSTEC/Volvo_EPS_FREE/blob/main/src/main.cpp
