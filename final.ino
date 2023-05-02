@@ -1,8 +1,3 @@
-// Sources for writing this script
-// https://github.com/NMSTEC/Volvo_EPS_FREE/blob/main/src/main.cpp
-// https://gist.github.com/mck1117/626174d991183cc72802074f954db97b/
-// https://github.com/rusefi/rusefi/blob/master/firmware/controllers/lua/examples/Volvo-electric-power-steering-pump.txt
-
 #include <SPI.h>
 #include <mcp2515.h>
 
@@ -67,9 +62,9 @@ void messageSender(){
   }
 
   potValue = analogRead(A0); // 0-1023
-  speedModifier = potvalue * 5.859375
+  speedModifier = potValue * 5.859375;
   
-  if speedModifier < 500 {
+  if (speedModifier < 500) {
     speedModifier = 0; 
   }
 
@@ -109,7 +104,16 @@ void loop() {
         start = 1;
         Serial.println("Saw CANBUS activity, starting message send");
     }
+      //   start = 1;
+      // if (fromPump.can_id == 0x1B200002) {
+      //   if ((rxId & 0x80000000) == 0x80000000)
+      //     sprintf(msgString, "%.8lX", (rxId & 0x1FFFFFFF));
+      // }
 
+      // if (!strcmp(msgString, "1B200002")){//This is a workaround since extID is 29 bit and arduino is 8 bit.
+      //   Serial.println("Saw CANBUS activity, starting message send");
+      //   start = 1;
+      // }
   } 
 
   // Check every once in a while that the pump is still on
